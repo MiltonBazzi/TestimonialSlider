@@ -1,0 +1,196 @@
+:root{
+   --DarkBlue: hsl(240, 38%, 20%);
+   --GrayishBlue: hsl(240, 18%, 77%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'inter' ;
+    src: url(./fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+body{
+    font-family: 'inter';
+} 
+
+.image-conteiner{
+   width: 327px;
+   height: 308px;
+   background-image: url(./images/pattern-bg.svg);
+   background-size: contain;
+   text-align: center;
+   padding-top: 30px;
+   margin: 24px auto 0;
+   position: relative;
+
+   & .image{
+    width: 78%;
+    border-radius: 6px;     
+   }
+
+    & .arrows-conteiner{
+        background-color: white;
+        width: 80px;
+        height: 40px;
+        border-radius: 50px;        
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 0px;
+        box-shadow: 1px 1px 5px;
+        & .arrow{
+            cursor: pointer;                       
+        }
+    }
+}
+
+.text-conteiner{
+    /* border: 1px solid rgb(223, 4, 4); */
+    margin-top: 40px;
+    padding-top: 26px;
+    position: relative;
+    
+    & .quotes{
+        width: 60px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0px;
+        margin: 0 auto;       
+    }
+    & .user-testimonial{
+        /* border: 1px solid rgb(36, 179, 83); */
+        width: 320px;
+        margin: 0px auto 19px;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        text-align: center;
+        color: var(--DarkBlue);
+        font-weight: 300;
+    } 
+    & .name-conteiner{
+        /* border: 1px solid rgb(29, 31, 180); */
+        padding-bottom: 15px;
+        & .user-name, .user-degree{
+            font-size: .9375rem;
+            text-align: center;
+        }
+        & .user-name{
+            color: var(--DarkBlue);            
+        }
+        & .user-degree{
+            color: var(--GrayishBlue);
+        }
+    }    
+}
+footer{
+    /* border: 1px solid rgb(29, 31, 180); */
+    width: 320px;
+    height: 72px;
+    background: url(./images/pattern-curve.svg);
+    background-size: cover;    
+}   
+
+
+@media (min-width: 768px) {
+    .image-conteiner{
+        /* border: 1px solid green; */
+        width: 552px;
+        height: 515px;
+        padding-top: 44px;
+
+        & .arrows-conteiner{
+            width: 122px;
+            height: 55px;
+        }
+    }
+    .text-conteiner{
+        /* border: 1px solid red; */
+        & .user-testimonial{
+            font-size: 25px;
+            line-height: 32px;
+            width: 440px ;
+        }
+        & .name-conteiner{
+            & .user-name, .user-degree{
+                font-size: 24px;
+            }
+        }            
+    }
+    footer{
+        /* border: 1px solid orange; */
+        width: 600px;
+        height: 110px;
+    }     
+
+}
+
+@media (min-width: 1024px) {
+    .testimonial{
+        /* border: 1px solid red; */
+        width: 1297px;
+        height: 645px;
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 50px auto 0px;
+        position: relative;
+    }    
+    .image-conteiner{
+        /* border: 1px solid orange; */
+        margin: 0px;
+        width: 702px;
+        height: 100%;
+        padding-top: 60px;
+        & .arrows-conteiner{
+            margin: unset;
+            left: 144px;            
+        }
+    }    
+    .text-conteiner{
+        /* border: 1px solid blue; */
+        width: 620px;
+        height: 354Px;
+        position: absolute;
+        left: 65px;
+        top: 130px;
+        & .quotes{
+            width: 120px;
+            margin: unset;
+            left: 86px            
+        }      
+        & .user-testimonial{
+            /* border: 1px solid rgb(199, 22, 175);  */
+            font-size: 30px;
+            line-height: 40px;
+            width: 100%;
+            text-align: left;
+            margin-top: 42px;          
+        }
+        & .name-conteiner{
+            display: flex;
+            & .user-name, .user-degree{
+                /* border: 4px solid rgb(37, 97, 40); */
+                margin: 15px 5px;                
+            }
+        }
+       
+
+    }
+    footer{
+        /* border: 1px solid green; */
+    }
+}
+
+
+
+
+
+.attribution { padding-top: 8px;font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%);}
